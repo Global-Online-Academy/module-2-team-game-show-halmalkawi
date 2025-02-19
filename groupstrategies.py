@@ -65,6 +65,8 @@ def code_crafters2(history):
         opponent_13_previous = history[13:]
         action = opponent_13_previous
     return action
+# Strategy that changes how it plays based on the opponent's moves. It is more likely to steal than split in general, 
+# but it will split if the opponent tends to split a lot.
 
 
 
@@ -147,6 +149,8 @@ def codecrafters1(history):
         if len(history) % 20 == 0:
             action = random.choice(["steal", "steal", "steal", "steal", "split", "split"])
     return action
+# This program uses percentages and randomization in the strategy. It also adapts to what the opponent does, and tends
+# to steal more 
 
 def codeCrafters3(history):
     opp_hist = [move[1] for move in history]
@@ -171,6 +175,7 @@ def codeCrafters3(history):
         return 'steal'
     else:
         return'split'
+# Similar program that uses previous actions to determine its next move.
 
 
 
